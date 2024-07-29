@@ -4,7 +4,6 @@ const userSchema = new mongoose.Schema({
     fullname : String,
     email : String,
     password : String,
-    isAdmin : Boolean,
     cart : [{ 
         type : mongoose.Schema.Types.ObjectId, 
         ref : 'product' 

@@ -9,7 +9,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-['helvetica_now_display']">
-    <nav class="w-full fixed top-0 left-0 px-5 py-3">
-        <h3 class="text-xl">Scatch</h3>
+<body class="bg-slate-100">
+    <nav class="w-full px-5 py-3 flex items-center justify-between z-2">
+        <h1 class="text-3xl ml-5">Scatch</h1>
+        <% var nav = (typeof hide_nav === 'undefined')? true : false %>
+        <% if (nav) { %>
+            <div class="flex gap-10 items-center text-lg">
+                <a href="/shop">Shop</a>
+                <a href="/cart">Cart</a>
+                <a href="">My Account</a>
+                <a class="px-3 py-1 bg-red-500 text-white rounded-md ml-3" href="/users/logout">Logout</a>
+            </div>
+        <% } %>
     </nav>
